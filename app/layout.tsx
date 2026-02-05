@@ -1,12 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { Geist } from 'next/font/google'
 import './globals.css'
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
   title: 'macOS Post-Install Script Generator | Setup your Mac automatically',
@@ -32,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} pt-(--header-height)`}>
+      <body className='pt-(--header-height)'>
         {children}
         <Script
           defer
