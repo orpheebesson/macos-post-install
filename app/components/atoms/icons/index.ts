@@ -57,3 +57,7 @@ export {
 export { FaEdge } from 'react-icons/fa'
 
 export { VscVscode } from 'react-icons/vsc'
+
+export { FiMoon, FiSun } from 'react-icons/fi'
+
+export { IoLogoGithub } from 'react-icons/io'
