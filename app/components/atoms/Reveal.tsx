@@ -114,7 +114,7 @@ export default function Reveal({
           {open || !destroyOnClose ? (
             <>
               {headerTitle && (
-                <div className='sticky w-full top-0 flex items-center justify-between border-b border-b-dark-200 bg-surface-primary p-6 gap-6'>
+                <div className='sticky z-10 w-full top-0 flex items-center justify-between border-b border-b-dark-200 bg-surface-primary p-6 gap-6'>
                   <div className='grow flex flex-col'>
                     <span className='font-semibold text-xl'>{headerTitle}</span>
                     <span className='text-content-secondary text-sm'>
