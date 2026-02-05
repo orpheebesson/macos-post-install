@@ -1,26 +1,125 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme static {
+  /**************/
+  /* 01. COLORS */
+  /**************/
+  /* Disable default colors */
+  --color-*: initial;
+  --color-transparent: transparent;
+
+  --color-current: currentColor;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-dark-950: #0a0a0b;
+  --color-dark-900: #18181b;
+  --color-dark-800: #27272a;
+  --color-dark-700: #3f3f46;
+  --color-dark-600: #52525b;
+  --color-dark-500: #71717a;
+  --color-dark-400: #a1a1aa;
+  --color-dark-300: #d4d4d8;
+  --color-dark-200: #e4e4e7;
+  --color-dark-100: #f4f4f5;
+  --color-dark-50: #fafafa;
+
+  --color-blue-950: #0c1e3d;
+  --color-blue-900: #1e3a5f;
+  --color-blue-800: #1e4d8b;
+  --color-blue-700: #1d5ba8;
+  --color-blue-600: #2563eb;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #60a5fa;
+  --color-blue-300: #93c5fd;
+  --color-blue-200: #bfdbfe;
+  --color-blue-100: #dbeafe;
+  --color-blue-50: #eff6ff;
+
+  --color-yellow: #f1b900;
+
+  /* Semantic tokens */
+  --color-content-primary: var(--color-dark-800);
+  --color-content-secondary: var(--color-dark-600);
+  --color-content-tertiary: var(--color-dark-500);
+
+  --color-surface-primary: var(--color-white);
+  --color-surface-secondary: var(--color-dark-800);
+  --color-surface-tertiary: var(--color-dark-500);
+
+  --color-stroke-primary: var(--color-dark-800);
+  --color-stroke-secondary: var(--color-dark-600);
+  --color-stroke-tertiary: var(--color-dark-500);
+
+  --color-accent: var(--color-blue-600);
+  --color-accent-light: var(--color-blue-50);
+
+  --color-warning: var(--color-yellow);
+  --color-warning-light: var(--color-yellow-light);
+
+  /*************/
+  /* 02. FONTS */
+  /*************/
+  --font-sans:
+    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-white: #000000;
+  --color-black: #ffffff;
+
+  --color-dark-950: #f4f4f5;
+  --color-dark-900: #e4e4e7;
+  --color-dark-800: #d5d5d8;
+  --color-dark-700: #b9b9c0;
+  --color-dark-600: #a4a4ad;
+  --color-dark-500: #85858e;
+  --color-dark-400: #55555e;
+  --color-dark-300: #27272b;
+  --color-dark-200: #18181b;
+  --color-dark-100: #0a0a0b;
+  --color-dark-50: #050505;
+
+  --color-blue-950: #c2d4f3;
+  --color-blue-900: #a0bce1;
+  --color-blue-800: #74a3e1;
+  --color-blue-700: #5795e2;
+  --color-blue-600: #1452da;
+  --color-blue-500: #0950c4;
+  --color-blue-400: #054a9f;
+  --color-blue-300: #02346c;
+  --color-blue-200: #011d40;
+  --color-blue-100: #011024;
+  --color-blue-50: #000710;
+
+  --color-yellow: #ffc70e;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --header-height: 64px;
+  }
+
+  * {
+    @apply antialiased;
+  }
+
+  /* https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor */
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    @apply outline-dashed outline-2 outline-offset-2 outline-accent;
   }
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  color: var(--color-content-primary);
+  background-color: var(--color-surface-primary);
 }
