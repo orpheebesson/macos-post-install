@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Head from 'next/head'
 import Script from 'next/script'
 import { Geist } from 'next/font/google'
 import './globals.css'
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  metadataBase: new URL('https://macos-post-install.dev/'),
+  metadataBase: new URL('https://www.macos-post-install.dev/'),
 }
 
 export default function RootLayout({
@@ -33,16 +32,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <Head>
+      <body className={`${geistSans.variable} pt-(--header-height)`}>
+        {children}
         <Script
           defer
           src='https://cloud.umami.is/script.js'
           data-website-id='735a662e-d848-47de-b3b1-0d288f2b7737'
           strategy='beforeInteractive'
         />
-      </Head>
-      <body className={`${geistSans.variable} pt-(--header-height)`}>
-        {children}
       </body>
     </html>
   )
