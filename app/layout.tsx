@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  metadataBase: new URL('https://www.macos-post-install.dev/'),
+  metadataBase: new URL('https://macos-post-install.dev/'),
 }
 
 export default function RootLayout({
