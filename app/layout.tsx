@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -26,14 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='pt-(--header-height)'>
-        {children}
-        <Script
+      <head>
+        <script
           defer
           src='https://cloud.umami.is/script.js'
           data-website-id='735a662e-d848-47de-b3b1-0d288f2b7737'
         />
-      </body>
+      </head>
+      <body className='pt-(--header-height)'>{children}</body>
     </html>
   )
 }
