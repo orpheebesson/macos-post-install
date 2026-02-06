@@ -1,2 +1,7 @@
 User-Agent: *
 Allow: /
+Disallow: /api
+Disallow: /private
+Disallow: /_next
+
+Sitempap: https://www.macos-post-install.dev/sitemap.xml
