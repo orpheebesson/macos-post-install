@@ -99,6 +99,8 @@ export default function Reveal({
         ref={dialogRef}
         tabIndex={-1}
         role='dialog'
+        aria-labelledby={headerTitle ? 'reveal-title' : undefined}
+        aria-describedby={headerSubtitle ? 'reveal-description' : undefined}
         className={clsx(
           'z-1001 fixed right-0 top-0 h-full w-full md:max-w-3xl duration-300 ease-out bg-surface-primary',
           open ? 'translate-x-0' : 'translate-x-full',
@@ -116,8 +118,13 @@ export default function Reveal({
               {headerTitle && (
                 <div className='sticky z-10 w-full top-0 flex items-center justify-between border-b border-b-dark-200 bg-surface-primary p-6 gap-6'>
                   <div className='grow flex flex-col'>
-                    <span className='font-semibold text-xl'>{headerTitle}</span>
-                    <span className='text-content-secondary text-sm'>
+                    <span id='reveal-title' className='font-semibold text-xl'>
+                      {headerTitle}
+                    </span>
+                    <span
+                      id='reveal-description'
+                      className='text-content-secondary text-sm'
+                    >
                       {headerSubtitle}
                     </span>
                   </div>
