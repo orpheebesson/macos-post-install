@@ -1,5 +1,5 @@
 name: "\U0001F41E Bug report"
-description: Create a report to help us improve macOS Post-Install
+description: Create a bug report to help us improve macOS Post-Install
 labels: ['bug']
 body:
   - type: markdown
@@ -18,7 +18,7 @@ body:
     id: reproduction
     attributes:
       label: Reproduction
-      description: Steps to reproduce the behavior.
+      description: Steps to reproduce the bug.
       placeholder: |
         1. Step one
         2. Step two
