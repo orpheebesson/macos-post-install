@@ -42,13 +42,7 @@ export default function CategoryApps({ category, apps }: CategoryAppsProps) {
           <div className='overflow-hidden grow shrink basis-0'>
             <h5 className='font-semibold text-lg'>
               {category.name}
-              <span
-                style={{
-                  fontSize: '10px',
-                  marginLeft: '8px',
-                  verticalAlign: 'middle',
-                }}
-              >
+              <span className='text-[10px] ml-2 align-middle'>
                 {expanded ? '▼' : '▶'}
               </span>
             </h5>
@@ -60,16 +54,7 @@ export default function CategoryApps({ category, apps }: CategoryAppsProps) {
 
         <button
           onClick={handleSelectAll}
-          style={{
-            minWidth: '100px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '4px',
-            padding: '4px 12px',
-            flexShrink: 0,
-          }}
+          className='flex flex-col justify-center items-center gap-1 shrink-0 px-3 py-1'
           title={
             allSelected
               ? 'Deselect all items in this category'
@@ -77,22 +62,18 @@ export default function CategoryApps({ category, apps }: CategoryAppsProps) {
           }
         >
           <input
+            id={`select-all-${category.id}`}
             type='checkbox'
             checked={allSelected}
             readOnly
-            className='win98-checkbox'
-            style={{ pointerEvents: 'none', marginBottom: '2px' }}
+            className='pointer-events-none mb-0.5'
           />
-          <span
-            style={{
-              fontSize: '10px',
-              fontWeight: 'bold',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-            }}
+          <label
+            htmlFor={`select-all-${category.id}`}
+            className='text-[10px] font-bold uppercase tracking-wide'
           >
             {allSelected ? 'Deselect All' : 'Select All'}
-          </span>
+          </label>
         </button>
       </div>
 
