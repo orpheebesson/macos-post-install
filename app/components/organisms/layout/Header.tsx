@@ -51,6 +51,7 @@ export default function Header() {
                   href={GIT_REPOSITORY_URL}
                   target='_blank'
                   rel='noopener noreferrer'
+                  aria-label='macOS Post-Install on GitHub'
                   className='transition-colors text-content-secondary hover:text-content-primary size-9 flex justify-center items-center'
                 >
                   <IoLogoGithub className='size-6' />
