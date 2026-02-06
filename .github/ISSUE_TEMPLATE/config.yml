@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contributing Guidelines
+    url: https://github.com/orpheebesson/macos-post-install/blob/main/CONTRIBUTING.md
+    about: Check the contributing guidelines before opening an issue

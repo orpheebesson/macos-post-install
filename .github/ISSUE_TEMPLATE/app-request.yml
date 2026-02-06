@@ -1,0 +1,70 @@
+name: '📲 App request'
+description: Request a new app to be added to the catalog
+labels: ['app']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new app! Please fill in as much of the template below as you're able.
+  - type: input
+    id: app-name
+    attributes:
+      label: App name
+      description: The official name of the app.
+      placeholder: Notion
+    validations:
+      required: true
+  - type: input
+    id: homebrew-cask-token
+    attributes:
+      label: Homebrew cask token
+      description: The Homebrew cask token. You can find it by searching your app on https://formulae.brew.sh/cask/. The token value is after the `/brew install --cask/` part in the installation command.
+      placeholder: notion
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: The category that best fits the app. This will help users find it in the catalog.
+      options:
+        - Web Browsers
+        - Communication
+        - Media Players
+        - Productivity
+        - Development Tools
+        - Creation
+        - AI
+        - Gaming
+        - System Utilities
+        - Security & Privacy
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Short description of the app. This will help users understand what the app is for and decide if they want to install it.
+      placeholder: An all-in-one workspace for notes, tasks, databases, and team collaboration.
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Website
+      description: Link to the app's official website.
+      placeholder: https://www.notion.com/
+    validations:
+      required: false
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Please verify the following before submitting.
+      options:
+        - label: The Homebrew cask token is correct
+          required: true
+        - label: This app is not already in the catalog
+          required: true
+        - label: This app is free or has a free tier
+          required: false
