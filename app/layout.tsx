@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   metadataBase: new URL('https://macos-post-install.dev/'),
+  verification: {
+    google: 'pixfwNpwPoKjTXGgtk5iAXeHfAd9VUBU66GTbJ4O92o',
+  },
 }
 
 export default function RootLayout({
