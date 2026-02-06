@@ -4,4 +4,4 @@ Disallow: /api
 Disallow: /private
 Disallow: /_next
 
-Sitempap: https://www.macos-post-install.dev/sitemap.xml
+Sitemap: https://www.macos-post-install.dev/sitemap.xml
