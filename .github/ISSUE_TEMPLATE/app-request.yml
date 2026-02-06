@@ -18,7 +18,7 @@ body:
     id: homebrew-cask-token
     attributes:
       label: Homebrew cask token
-      description: The Homebrew cask token. You can find it by searching your app on https://formulae.brew.sh/cask/. The token value is after the `/brew install --cask/` part in the installation command.
+      description: The Homebrew cask token. You can find it by searching your app on https://formulae.brew.sh/cask/. The token value is after the `brew install --cask` part in the installation command.
       placeholder: notion
     validations:
       required: true
