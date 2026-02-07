@@ -2,6 +2,7 @@ import { SelectionProvider } from '@/context/SelectionContext'
 import {
   ActionBar,
   AppCards,
+  FaqSection,
   FeaturesCards,
   Footer,
   Header,
@@ -17,6 +18,7 @@ export default function Home() {
           <HomeHero />
           <FeaturesCards />
           <AppCards />
+          <FaqSection />
           <ActionBar />
         </div>
       </main>
