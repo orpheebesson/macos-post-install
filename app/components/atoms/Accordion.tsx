@@ -1,6 +1,8 @@
 'use client'
 
 import { ReactNode, useState, useRef, useEffect } from 'react'
+import type { FAQPage, WithContext } from 'schema-dts'
+import { extractTextContent } from '@/utils/utilities'
 import clsx from 'clsx'
 
 interface AccordionItemProps {
@@ -85,7 +87,7 @@ function AccordionItem({
 interface AccordionProps {
   items: Array<{
     title: string
-    content: React.ReactNode
+    content: ReactNode
   }>
   allowMultiple?: boolean
   defaultOpenIndexes?: number[]
@@ -117,24 +119,43 @@ export default function Accordion({
     })
   }
 
+  const jsonLd: WithContext<FAQPage> = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.title,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: extractTextContent(item.content),
+      },
+    })),
+  }
+
   return (
-    <div
-      className={clsx(
-        'divide-y divide-dark-200 rounded-xl border border-dark-200 bg-surface-primary',
-        customClasses
-      )}
-    >
-      {items.map((item, index) => (
-        <AccordionItem
-          key={index}
-          index={index}
-          title={item.title}
-          isOpen={openIndexes.has(index)}
-          onToggle={() => toggleItem(index)}
-        >
-          {item.content}
-        </AccordionItem>
-      ))}
-    </div>
+    <>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div
+        className={clsx(
+          'divide-y divide-dark-200 rounded-xl border border-dark-200 bg-surface-primary',
+          customClasses
+        )}
+      >
+        {items.map((item, index) => (
+          <AccordionItem
+            key={index}
+            index={index}
+            title={item.title}
+            isOpen={openIndexes.has(index)}
+            onToggle={() => toggleItem(index)}
+          >
+            {item.content}
+          </AccordionItem>
+        ))}
+      </div>
+    </>
   )
 }
