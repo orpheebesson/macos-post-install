@@ -4,15 +4,13 @@ Thanks for contributing to this project. Please read these guidelines before con
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-- [Development Setup](#development-setup)
-- [Project Structure](#project-structure)
-- [How to Contribute](#how-to-contribute)
-  - [Adding Software to the Catalog](#adding-software-to-the-catalog)
-  - [Modifying the UI](#modifying-the-ui)
-- [Code Style Guidelines](#code-style-guidelines)
+- [Getting started](#getting-started)
+- [Development setup](#development-setup)
+- [Project structure](#project-structure)
+- [How to contribute](#how-to-contribute)
+- [Code style guidelines](#code-style-guidelines)
 - [Commit Convention](#commit-convention)
-- [Pull Request Process](#pull-request-process)
+- [Pull Request](#pull-request)
 - [Labels](#labels)
 
 ## Getting started
@@ -204,7 +202,7 @@ This project is using [Conventional Commits](https://www.conventionalcommits.org
 ## Pull Request
 
 1. **Create a branch** from `main` with a descriptive name:
-   - `feat/add-notion-soappftware`
+   - `feat/add-notion-app`
    - `fix/script-export`
    - `docs/update-readme`
 
