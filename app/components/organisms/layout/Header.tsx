@@ -26,7 +26,7 @@ export default function Header() {
     <header className='fixed top-0 left-0 w-full z-50'>
       <div
         className={clsx(
-          'h-(--header-height) bg-surface-primary relative',
+          'h-(--header-height) bg-background relative',
           'transition-[border] border-b duration-300',
           isScrolled ? 'border-b-dark-200' : 'border-b-transparent'
         )}

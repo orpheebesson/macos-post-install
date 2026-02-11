@@ -140,7 +140,7 @@ export default function Accordion({
       />
       <div
         className={clsx(
-          'divide-y divide-dark-200 rounded-xl border border-dark-200 bg-surface-primary',
+          'divide-y divide-dark-200 rounded-xl border border-dark-200 bg-background',
           customClasses
         )}
       >

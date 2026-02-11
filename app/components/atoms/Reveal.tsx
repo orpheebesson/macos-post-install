@@ -17,7 +17,7 @@ interface RevealProps {
 
 export default function Reveal({
   open,
-  bgColor = 'bg-surface-secondary/75',
+  bgColor = 'bg-black/75',
   blur = true,
   destroyOnClose = true,
   headerTitle,
@@ -102,7 +102,7 @@ export default function Reveal({
         aria-labelledby={headerTitle ? 'reveal-title' : undefined}
         aria-describedby={headerSubtitle ? 'reveal-description' : undefined}
         className={clsx(
-          'z-1001 fixed right-0 top-0 h-full w-full md:max-w-3xl duration-300 ease-out bg-surface-primary',
+          'z-1001 fixed right-0 top-0 h-full w-full md:max-w-3xl duration-300 ease-out bg-background border-l border-l-dark-200',
           open ? 'translate-x-0' : 'translate-x-full',
           open ? 'pointer-events-auto' : 'pointer-events-none'
         )}
@@ -116,7 +116,7 @@ export default function Reveal({
           {open || !destroyOnClose ? (
             <>
               {headerTitle && (
-                <div className='sticky z-10 w-full top-0 flex items-center justify-between border-b border-b-dark-200 bg-surface-primary p-6 gap-6'>
+                <div className='sticky z-10 w-full top-0 flex items-center justify-between border-b border-b-dark-200 bg-background p-6 gap-6'>
                   <div className='grow flex flex-col'>
                     <span id='reveal-title' className='font-semibold text-xl'>
                       {headerTitle}

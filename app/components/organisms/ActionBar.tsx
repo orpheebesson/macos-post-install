@@ -35,7 +35,7 @@ export default function ActionBar() {
       <nav
         ref={navRef}
         className={clsx(
-          'fixed bottom-4 p-2 md:p-3 z-10 bg-surface-primary rounded-2xl border border-dark-200 left-1/2 -translate-x-1/2 shadow-lg transition duration-300',
+          'fixed bottom-4 p-2 md:p-3 z-10 bg-background rounded-2xl border border-dark-200 left-1/2 -translate-x-1/2 shadow-lg transition duration-300',
           'flex flex-col items-center gap-4',
           selectedApps.length > 0 && !isOverFooter
             ? 'translate-y-0 pointer-events-auto'
