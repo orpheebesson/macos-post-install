@@ -52,7 +52,7 @@ export default function ActionReveal({ open, onClose }: ActionRevealProps) {
             className={clsx(
               'flex-1 px-4 py-3 text-sm inline-flex items-center justify-center gap-3 transition relative font-semibold',
               activeTab === 'copy'
-                ? ' text-white'
+                ? 'text-dark-200'
                 : 'text-content-secondary hover:text-content-primary'
             )}
             data-umami-event='Copy to clipboard tab'
@@ -78,7 +78,7 @@ export default function ActionReveal({ open, onClose }: ActionRevealProps) {
             className={clsx(
               'flex-1 px-4 py-3 text-sm inline-flex items-center justify-center gap-3 transition relative font-semibold',
               activeTab === 'export'
-                ? ' text-white'
+                ? ' text-dark-200'
                 : 'text-content-secondary hover:text-content-primary'
             )}
             data-umami-event='Export as file tab'

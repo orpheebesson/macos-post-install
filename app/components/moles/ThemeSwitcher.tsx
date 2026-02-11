@@ -18,7 +18,7 @@ export default function ThemeSwitcher() {
     >
       <span
         className={clsx(
-          'absolute top-1/2 left-px -translate-y-1/2 size-4.5 rounded-full bg-surface-primary transition-transform duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.04)]',
+          'absolute top-1/2 left-px -translate-y-1/2 size-4.5 rounded-full bg-background transition-transform duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.04)]',
           theme === 'dark' && 'translate-x-4.5'
         )}
       >
