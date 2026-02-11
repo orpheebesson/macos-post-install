@@ -18,7 +18,7 @@ const AppCard = memo(({ id, icon, name, description }: AppCardProps) => {
                 ${
                   isSelected
                     ? 'border-accent bg-accent-light'
-                    : 'border-dark-200 hover:border-accent bg-surface-primary'
+                    : 'border-dark-200 hover:border-accent bg-background'
                 }`}
     >
       <div className='flex flex-col items-start gap-3'>

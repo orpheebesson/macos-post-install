@@ -9,8 +9,9 @@ export const buttonStyles = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-surface-secondary border-stroke-primary text-white',
-        secondary: 'border-stroke-primary bg-transparent text-content-primary',
+        primary: 'bg-accent border-accent text-button-text-primary',
+        secondary:
+          'border-stroke-primary bg-transparent text-button-text-secondary',
       },
       size: {
         large:
@@ -27,22 +28,27 @@ export const buttonStyles = cva(
       },
     },
     compoundVariants: [
-      { variant: 'primary', disabled: true, class: 'text-white/60' },
+      {
+        variant: 'primary',
+        disabled: true,
+        class: 'text-button-text-primary/60',
+      },
       {
         variant: 'secondary',
         disabled: true,
-        class: 'text-content-primary/50',
+        class: 'text-button-text-secondary/50',
       },
       {
         variant: 'primary',
         disabled: false,
-        class: 'hover:bg-dark-600 hover:border-dark-600',
+        class:
+          'hover:bg-accent-dark hover:border-accent-dark hover:text-button-text-primary-hover',
       },
       {
         variant: 'secondary',
         disabled: false,
         class:
-          'hover:bg-surface-secondary hover:border-stroke-primary hover:text-white',
+          'hover:bg-surface-secondary hover:border-stroke-primary hover:text-button-text-secondary-hover',
       },
     ],
     defaultVariants: {
