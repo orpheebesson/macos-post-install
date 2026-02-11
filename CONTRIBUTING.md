@@ -26,7 +26,7 @@ Thanks for contributing to this project. Please read these guidelines before con
 Before you begin, make sure your development environment meets the following requirements:
 
 - Node.js: 20.9 or higher
-- Operating systems: macOS, Windows (including WSL), and Linux.
+- Operating systems: macOS, Windows (including WSL), and Linux
 
 ### Installation
 
