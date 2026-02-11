@@ -31,7 +31,7 @@ The project is fully open source, so feel free to share feedback, ideas, or cont
 
 Your Mac is now ready to use!
 
-## Local Development
+## Local development
 
 ### System requirements
 

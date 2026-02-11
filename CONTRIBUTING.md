@@ -2,7 +2,7 @@
 
 Thanks for contributing to this project. Please read these guidelines before contributing.
 
-## Table of Contents
+## Table of contents
 
 - [Getting started](#getting-started)
 - [Development setup](#development-setup)
