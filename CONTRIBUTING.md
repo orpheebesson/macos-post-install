@@ -2,15 +2,15 @@
 
 Thanks for contributing to this project. Please read these guidelines before contributing.
 
-## Table of Contents
+## Table of contents
 
 - [Getting started](#getting-started)
 - [Development setup](#development-setup)
 - [Project structure](#project-structure)
 - [How to contribute](#how-to-contribute)
 - [Code style guidelines](#code-style-guidelines)
-- [Commit Convention](#commit-convention)
-- [Pull Request](#pull-request)
+- [Commit convention](#commit-convention)
+- [Pull request](#pull-request)
 - [Labels](#labels)
 
 ## Getting started
@@ -26,7 +26,7 @@ Thanks for contributing to this project. Please read these guidelines before con
 Before you begin, make sure your development environment meets the following requirements:
 
 - Node.js: 20.9 or higher
-- Operating systems: macOS, Windows (including WSL), and Linux.
+- Operating systems: macOS, Windows (including WSL), and Linux
 
 ### Installation
 
@@ -181,7 +181,7 @@ When modifying UI components:
 - Use meaningful variable and function names
 - Add comments only when logic isn't self-evident
 
-## Commit Convention
+## Commit convention
 
 This project is using [Conventional Commits](https://www.conventionalcommits.org/):
 
@@ -199,7 +199,7 @@ This project is using [Conventional Commits](https://www.conventionalcommits.org
 | `chore`     | Other changes that don't modify app or test files                                                      | `chore: update .gitignore`                                  |
 | `revert`    | Reverts a previous commit                                                                              | `revert: "fix: correct CSS color for button background"`    |
 
-## Pull Request
+## Pull request
 
 1. **Create a branch** from `main` with a descriptive name:
    - `feat/add-notion-app`
