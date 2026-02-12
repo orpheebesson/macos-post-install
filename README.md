@@ -97,5 +97,6 @@ Contributions to macOS Post-Install are welcome and highly appreciated. However,
 
 ## Credits
 
-- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Icons](https://react-icons.github.io/react-icons/) for icons
+- [svg-term-cli](https://github.com/marionebl/svg-term-cli/) for sharing terminal sessions via SVG
 - [Kaic](https://kaic.me/) and his [Win-Post-Install](https://kaic.me/win-post-install/) project that inspired me
