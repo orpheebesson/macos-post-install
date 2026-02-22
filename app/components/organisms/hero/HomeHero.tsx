@@ -11,6 +11,7 @@ export default function HomeHero() {
           height={1080}
           className='object-cover h-full w-full'
           priority
+          fetchPriority='high'
         />
       </div>
       <div className='text-center md:text-left flex flex-col gap-3'>
