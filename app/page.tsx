@@ -1,13 +1,15 @@
+import dynamic from 'next/dynamic'
 import { SelectionProvider } from '@/context/SelectionContext'
 import {
   ActionBar,
   AppCards,
-  FaqSection,
   FeaturesCards,
   Footer,
   Header,
   HomeHero,
 } from '@/components/organisms'
+
+const FaqSection = dynamic(() => import('@/components/organisms/FaqSection'))
 
 export default function Home() {
   return (
