@@ -168,7 +168,8 @@ export const apps: IApp[] = [
     description:
       'Opinionated screen recorder that makes your videos look beautiful with minimal effort.',
     icon: {
-      value: 'CustomScreenStudio',
+      value: 'PiRecord',
+      color: '#9E31F7',
     },
     cask: 'screen-studio',
     category: 'productivity',
