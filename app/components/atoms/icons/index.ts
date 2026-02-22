@@ -13,7 +13,6 @@ export { default as CustomHandbrake } from './CustomHandbrake'
 export { default as CustomHyper } from './CustomHyper'
 export { default as CustomNotionCalendar } from './CustomNotionCalendar'
 export { default as CustomPlex } from './CustomPlex'
-export { default as CustomScreenStudio } from './CustomScreenStudio'
 export { default as CustomSlack } from './CustomSlack'
 export { default as CustomZoom } from './CustomZoom'
 
@@ -61,3 +60,5 @@ export { VscVscode } from 'react-icons/vsc'
 export { FiMoon, FiSun } from 'react-icons/fi'
 
 export { IoLogoGithub } from 'react-icons/io'
+
+export { PiRecord } from 'react-icons/pi'
