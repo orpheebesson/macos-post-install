@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { Button } from '@/components/atoms'
-import { ActionReveal } from '@/components/organisms'
+
+const ActionReveal = dynamic(() => import('@/components/organisms/ActionReveal'))
 import { useSelection } from '@/hooks'
 import clsx from 'clsx'
 

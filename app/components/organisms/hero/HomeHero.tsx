@@ -10,6 +10,7 @@ export default function HomeHero() {
           width={1650}
           height={1080}
           className='object-cover h-full w-full'
+          priority
         />
       </div>
       <div className='text-center md:text-left flex flex-col gap-3'>
